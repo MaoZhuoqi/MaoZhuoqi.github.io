@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="MAOZHUOQI" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="http://maozhuoqi.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+    <link rel="stylesheet" href="https://maozhuoqi.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
 
     
     <meta name="twitter:card" content="summary"/>
@@ -39,7 +39,7 @@ Math页面下的Generate Test的回调函数 function GenerateTestButtonPushed(a
 代码实现 我是用MATLAB里的App Designer工具来做的GUI设计，具体的GUI排布就各自发挥了，我就不放上来了。主要还是代码实现。
 Math页面下的Generate Test的回调函数 function GenerateTestButtonPushed(app, event) global data1; global data2; %生成随机数存入data1中 data1=zeros(str2num(app.QuantityDropDown.Value),str2num(app.NumbersDropDown.Value)); for countquan = 1:str2num(app.QuantityDropDown.Value) for countnumb = 1:str2num(app.NumbersDropDown.Value) data1(countquan,countnumb) = randi([1 str2num(app.DifficultyDropDown.Value)],1,1); end end %判断复选框的勾选情况，启用不同的四则运算算法（&#43;,-,*,/） data2=zeros(str2num(app.QuantityDropDown.Value),str2num(app.NumbersDropDown.Value)-1); for countquan = 1:str2num(app.QuantityDropDown.Value) for countnumb = 1:str2num(app.NumbersDropDown.Value)-1 if (app.CheckBox.Value == 1 &amp;&amp; app.CheckBox_2.Value == 0 &amp;&amp; app.CheckBox_2.Value == 0 &amp;&amp; app.CheckBox_3.Value == 0) data2(countquan,countnumb) = randi([1 1],1,1); elseif (app." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://maozhuoqi.github.io/post1/blog/" />
+<meta property="og:url" content="https://maozhuoqi.github.io/post1/blog/" />
 <meta property="article:published_time" content="2020-04-04T15:28:15+08:00" />
 <meta property="article:modified_time" content="2020-04-04T15:28:15+08:00" />
 
@@ -47,7 +47,7 @@ Math页面下的Generate Test的回调函数 function GenerateTestButtonPushed(a
   </head>
   <body>
     <header class="app-header">
-      <a href="http://maozhuoqi.github.io"><img class="app-header-avatar" src="https://avatars3.githubusercontent.com/u/13461567?s=460&amp;u=be44e693d0ecc3769a88ffa709e9a47036ae99e3&amp;v=4" alt="MAOZHUOQI" /></a>
+      <a href="https://maozhuoqi.github.io"><img class="app-header-avatar" src="https://avatars3.githubusercontent.com/u/13461567?s=460&amp;u=be44e693d0ecc3769a88ffa709e9a47036ae99e3&amp;v=4" alt="MAOZHUOQI" /></a>
       <h1>MAODOWS SITE</h1>
       <p>随便写写</p>
       <div class="app-header-social">
