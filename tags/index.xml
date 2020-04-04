@@ -6,10 +6,19 @@
     <description>Recent content in Tags on MaoZhuoqi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 04 Apr 2020 15:28:15 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 22:27:36 +0800</lastBuildDate>
     
 	<atom:link href="https://maozhuoqi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JAVA</title>
+      <link>https://maozhuoqi.github.io/tags/java/</link>
+      <pubDate>Sat, 04 Apr 2020 22:27:36 +0800</pubDate>
+      
+      <guid>https://maozhuoqi.github.io/tags/java/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>MATLAB</title>

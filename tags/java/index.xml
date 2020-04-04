@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on MaoZhuoqi Blog</title>
-    <link>https://maozhuoqi.github.io/post/</link>
-    <description>Recent content in Posts on MaoZhuoqi Blog</description>
+    <title>JAVA on MaoZhuoqi Blog</title>
+    <link>https://maozhuoqi.github.io/tags/java/</link>
+    <description>Recent content in JAVA on MaoZhuoqi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 04 Apr 2020 22:27:36 +0800</lastBuildDate>
     
-	<atom:link href="https://maozhuoqi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://maozhuoqi.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -29,26 +29,6 @@
    第一道题就不用说了，基础中的基础，分分钟搞定。后面两题难度依次增加。
 第二题刚拿到有点没搞清楚思路，交流了一下，得到一个比较好的算法，简单说就是先计算左上到右下对角线的值，再计算上面横向的值，接着计算右面竖向的值，然后是下面的值，最后是左边的值，这样就可以组合成数字螺旋了。
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34  //算左上至右下的对角线的值  for (int i = 0; i &amp;lt; n / 2; i++) { A[i + 1][i + 1] = A[i][i] + 4 * (n - 2 * i - 1); } //计算每行上面横向的值  for (int i = 0; i &amp;lt; n; i++) { for (int j = i + 1; j &amp;lt; n - i; j++) { A[i][j] = A[i][j - 1] + 1; } } //计算每列右边竖向的值  for (int i = n - 1; i &amp;gt;= 0; i--) { for (int j = n - i - 1; j &amp;lt; i; j++) { A[j + 1][i] = A[j][i] + 1; } } //计算每行下面横向的值  for (int i = n - 1; i &amp;gt; n / 2; i--) { for (int j = i; j &amp;gt; n - i - 1; j--) { A[i][j - 1] = A[i][j] + 1; } } //计算每列左边竖向的值  for (int i = 0; i &amp;lt; n / 2; i++) { for (int j = n - 1 - i; j &amp;gt; i + 1; j--) { A[j - 1][i] = A[j][i] + 1; } }   当然如果n*n的矩阵的n是偶数，就需要特别处理一下：</description>
-    </item>
-    
-    <item>
-      <title>熊孩子，程序员还治不了你了!!!</title>
-      <link>https://maozhuoqi.github.io/post/blog1/</link>
-      <pubDate>Sat, 04 Apr 2020 15:28:15 +0800</pubDate>
-      
-      <guid>https://maozhuoqi.github.io/post/blog1/</guid>
-      <description>事情是这样子的，MATLAB编程课上，老师看到了这么一篇文章《熊孩子，程序员还治不了你了!!!》，就让我们也写一个文中类是的工具，接下来就是一天的奋战。
-原文是这么说的：
- 作为一个程序员，我就不信，我还治不了一个熊孩子！
-你不让我过好年，那我也不让你过好童年！
- 简直太坏了。
-工具功能 这个工具可以生成适合小学低年级的简单的加减算法。生成的文件是txt格式，可以通过打印机把习题打印出来，同时生成答案文件，可以用作最终的校对。
-如果熊孩子已经过了加减算法的年纪，还有乘除算法，四位数算法，加减乘除混合算法等着他
-不要担心题库不够，里面采用的都是随机数！
-如果熊孩子的数学还不错，是不是这个工具就治不了他了？
-不存在的！唐诗三百首背起来啊！
-代码实现 我是用MATLAB里的App Designer工具来做的GUI设计，具体的GUI排布就各自发挥了，我就不放上来了。主要还是代码实现。
-Math页面下的Generate Test的回调函数 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122  functionGenerateTestButtonPushed(app, event)global data1; global data2; %生成随机数存入data1中 data1=zeros(str2num(app.</description>
     </item>
     
   </channel>

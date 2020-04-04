@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+  <title>一个 j a v a实验课 | MaoZhuoqi Blog</title>
+  <meta charset='utf-8'>
+  <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+  <meta http-equiv = 'X-UA-Compatible' content = 'IE=edge'>
+  <meta name = 'SKYPE_TOOLBAR' content = 'SKYPE_TOOLBAR_PARSER_COMPATIBLE' /><meta name = 'keywords' content = 'MaoZhuoqi Blog'>
+<meta property = 'og:locale' content = 'en_US' />
+<meta property = 'og:type' content = 'article' />
+<meta property = 'og:title' content = '一个JAVA实验课' />
+<meta property = 'og:description' content = '这是一次JAVA实验课的实验内容。
+实验内容如下
+   从键盘输入3个浮点数作为三角形三边的边长，试计算三角形的面积。
+  编程序，显示螺旋方阵
+​ 1 2 3 4
+​ 12 13 14 5
+​ 11 16 15 6
+​ 10 9 8 7
+  读取疫情数据，并输出确认人数最高的5个地区。
+   第一 …'>
+<meta property = 'og:url' content = 'https://maozhuoqi.github.io/post/blog2/' />
+<meta property = 'og:image' content = 'https://maozhuoqi.github.io/images/a2df5adfcb907ebbef4ec5df94dd2d88.jpg'/>
+<link rel='apple-touch-icon' sizes='180x180' href='https://maozhuoqi.github.io/images/icons/apple-touch-icon.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='https://maozhuoqi.github.io/images/icons/favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='https://maozhuoqi.github.io/images/icons/favicon-16x16.png'>
+<link rel='manifest' href='https://maozhuoqi.github.io/images/icons/site.webmanifest'>
+<meta name='msapplication-TileColor' content='#da532c'>
+<meta name='theme-color' content='#ffffff'>
+
+  <link rel='canonical' href='https://maozhuoqi.github.io/post/blog2/'>
+  <link rel = 'stylesheet' href = 'https://maozhuoqi.github.io/css/main.a5f17006ae9ec3e88d39585a120000c9781f380cb2477d6b695163c51e4fee09563547f2cf2538c4dc16d7d4728007fa9316ccdb7ac1bf4e0724ddf5375546fe.css' integrity = 'sha512-pfFwBq6ew&#43;iNOVhaEgAAyXgfOAyyR31raVFjxR5P7glWNUfyzyU4xNwW19RygAf6kxbM23rBv04HJN31N1VG/g=='>
+</head>
+
+  <body>
+    <div class = 'nav-drop'>
+  <div class = 'nav-body'>
+    
+      <a href = 'https://maozhuoqi.github.io/about/' class = 'nav_item'>About</a>
+    
+      <a href = 'https://maozhuoqi.github.io' class = 'nav_item'>Blog</a>
+    
+      <a href = 'https://maozhuoqi.github.io/tags' class = 'nav_item'>Tag</a>
+    
+    <div class = 'nav-close'></div>
+    <div class = 'color_mode'>
+<label for = 'mode'>Toggle Dark Mode</label>
+<input type = 'checkbox' class = 'color_choice' id = 'mode'>
+</div>
+
+  </div>
+</div>
+<header class = 'nav' >
+  <nav class = 'nav-menu'>
+    <a href='https://maozhuoqi.github.io' class = 'nav-brand nav_item'>MaoZhuoqi Blog</a>
+    <div class = 'nav_bar-wrap'>
+      <div class = 'nav_bar'></div>
+    </div>
+  </nav>
+</header>
+
+
+    <main>
+      
+  <div class = 'wrap mt post'>
+    <div><p class = 'post_date pale'>04. April 2020</p>
+      <h1 class = 'post_title'>一个JAVA实验课</h1>
+      <div class = 'post_body'>
+        <div class = 'post_inner'>
+        
+          <img src = 'https://maozhuoqi.github.io/images/a2df5adfcb907ebbef4ec5df94dd2d88.jpg' alt = 'a2df5adfcb907ebbef4ec5df94dd2d88.jpg' class = 'post_thumbnail'>
+        
+          <p>这是一次JAVA实验课的实验内容。</p>
+<p>实验内容如下</p>
+<blockquote>
+<ol>
+<li>
+<p>从键盘输入3个浮点数作为三角形三边的边长，试计算三角形的面积。</p>
+</li>
+<li>
+<p>编程序，显示螺旋方阵</p>
+<p>​     1     2    3    4</p>
+<p>​     12 13 14    5</p>
+<p>​     11 16 15    6</p>
+<p>​     10   9    8   7</p>
+</li>
+<li>
+<p>读取疫情数据，并输出确认人数最高的5个地区。</p>
+</li>
+</ol>
+</blockquote>
+<p>第一道题就不用说了，基础中的基础，分分钟搞定。后面两题难度依次增加。</p>
+<p>第二题刚拿到有点没搞清楚思路，交流了一下，得到一个比较好的算法，简单说就是先计算左上到右下对角线的值，再计算上面横向的值，接着计算右面竖向的值，然后是下面的值，最后是左边的值，这样就可以组合成数字螺旋了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">		<span class="c1">//算左上至右下的对角线的值
+</span><span class="c1"></span>        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">/</span> <span class="n">2</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">A</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">1</span><span class="o">][</span><span class="n">i</span> <span class="o">+</span> <span class="n">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="n">4</span> <span class="o">*</span> <span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">2</span> <span class="o">*</span> <span class="n">i</span> <span class="o">-</span> <span class="n">1</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="c1">//计算每行上面横向的值
+</span><span class="c1"></span>        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span> <span class="o">-</span> <span class="n">1</span><span class="o">]</span> <span class="o">+</span> <span class="n">1</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+
+        <span class="c1">//计算每列右边竖向的值
+</span><span class="c1"></span>        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="n">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span> <span class="o">{</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="n">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="n">A</span><span class="o">[</span><span class="n">j</span> <span class="o">+</span> <span class="n">1</span><span class="o">][</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">A</span><span class="o">[</span><span class="n">j</span><span class="o">][</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="n">1</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+
+        <span class="c1">//计算每行下面横向的值
+</span><span class="c1"></span>        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="n">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">n</span> <span class="o">/</span> <span class="n">2</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span> <span class="o">{</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="n">n</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="n">1</span><span class="o">;</span> <span class="n">j</span><span class="o">--)</span> <span class="o">{</span>
+                <span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span> <span class="o">-</span> <span class="n">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">+</span> <span class="n">1</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="c1">//计算每列左边竖向的值
+</span><span class="c1"></span>        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">/</span> <span class="n">2</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="n">1</span> <span class="o">-</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="n">i</span> <span class="o">+</span> <span class="n">1</span><span class="o">;</span> <span class="n">j</span><span class="o">--)</span> <span class="o">{</span>
+                <span class="n">A</span><span class="o">[</span><span class="n">j</span> <span class="o">-</span> <span class="n">1</span><span class="o">][</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">A</span><span class="o">[</span><span class="n">j</span><span class="o">][</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="n">1</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>当然如果n*n的矩阵的n是偶数，就需要特别处理一下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">	<span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">2</span> <span class="o">==</span> <span class="n">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">A</span><span class="o">[</span><span class="n">n</span> <span class="o">/</span> <span class="n">2</span><span class="o">][</span><span class="n">n</span> <span class="o">/</span> <span class="n">2</span> <span class="o">-</span> <span class="n">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">sum</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">calwei</span><span class="o">(</span><span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]);</span>
+                <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">wei</span> <span class="o">-</span> <span class="n">temp</span><span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+                    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&#34; &#34;</span><span class="o">);</span>
+                <span class="o">}</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">+</span> <span class="s">&#34; &#34;</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="n">wei</span> <span class="o">-</span> <span class="n">1</span><span class="o">;</span> <span class="n">s</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>第三道题对我来说还是有点难度的，因为我以前没有学过这么从网络上下载东西。再网上找了一下代码，照着写了一下。思路是先把所有的数据用正则表达式提取到本地的数组变量中，再用查找算法，依次查找最大的五个值的位置，这样就可以输出五个数量最多的城市了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">        <span class="c1">//这个是链接网站
+</span><span class="c1"></span>		<span class="n">String</span> <span class="n">url</span><span class="o">=</span><span class="s">&#34;https://ncov.dxy.cn/ncovh5/view/pneumonia&#34;</span><span class="o">;</span>         <span class="c1">//丁香园的网站
+</span><span class="c1"></span>        <span class="n">String</span> <span class="n">result</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="o">;</span>
+        <span class="n">BufferedReader</span> <span class="n">in</span><span class="o">=</span><span class="kc">null</span><span class="o">;</span>     <span class="c1">//创建一个使用默认大小输入缓冲区的缓冲字符输入流
+</span><span class="c1"></span>        <span class="k">try</span><span class="o">{</span>
+            <span class="n">URL</span> <span class="n">realUrl</span><span class="o">=</span><span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
+            <span class="n">URLConnection</span> <span class="n">connection</span><span class="o">=</span><span class="n">realUrl</span><span class="o">.</span><span class="na">openConnection</span><span class="o">();</span><span class="c1">//链接网站
+</span><span class="c1"></span>            <span class="n">connection</span><span class="o">.</span><span class="na">connect</span><span class="o">();</span>
+            <span class="n">in</span><span class="o">=</span><span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">InputStreamReader</span><span class="o">(</span><span class="n">connection</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">()));</span>
+            <span class="n">String</span> <span class="n">line</span><span class="o">;</span>
+            <span class="k">while</span><span class="o">((</span><span class="n">line</span><span class="o">=</span><span class="n">in</span><span class="o">.</span><span class="na">readLine</span><span class="o">())!=</span><span class="kc">null</span><span class="o">){</span>
+                <span class="n">result</span><span class="o">+=</span><span class="n">line</span><span class="o">+</span><span class="s">&#34;\n&#34;</span><span class="o">;</span>
+            <span class="o">}</span>
+
+        <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;发送GET请求出现异常&#34;</span><span class="o">+</span><span class="n">e</span><span class="o">);</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="k">finally</span><span class="o">{</span>
+            <span class="k">try</span>
+            <span class="o">{</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">in</span><span class="o">!=</span><span class="kc">null</span><span class="o">){</span>
+                    <span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+                <span class="o">}</span>
+            <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">e2</span><span class="o">){</span>
+                <span class="n">e2</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">		<span class="c1">//这里是把每个数值提取出来
+</span><span class="c1"></span>                <span class="n">String</span> <span class="n">CityCondition</span> <span class="o">=</span> <span class="n">CitySituationMatcher</span><span class="o">.</span><span class="na">group</span><span class="o">(</span><span class="n">0</span><span class="o">);</span>
+
+                <span class="n">String</span> <span class="n">CityName</span> <span class="o">=</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">9</span><span class="o">,</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">&#39;,&#39;</span><span class="o">));</span>
+
+                <span class="n">CityCondition</span> <span class="o">=</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">CityCondition</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">&#39;,&#39;</span><span class="o">)</span> <span class="o">+</span> <span class="n">1</span><span class="o">);</span>
+
+                <span class="n">String</span> <span class="n">TodayConfirmed</span> <span class="o">=</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">22</span><span class="o">,</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">&#39;,&#39;</span><span class="o">));</span><span class="c1">//今日确诊
+</span><span class="c1"></span>
+                <span class="n">CityCondition</span> <span class="o">=</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">CityCondition</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">&#39;,&#39;</span><span class="o">)</span> <span class="o">+</span> <span class="n">1</span><span class="o">);</span>
+
+                <span class="n">String</span> <span class="n">TotallyConfirmed</span> <span class="o">=</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">15</span><span class="o">,</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">&#39;,&#39;</span><span class="o">));</span><span class="c1">//总共确诊
+</span><span class="c1"></span>
+                <span class="n">CityCondition</span> <span class="o">=</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">CityCondition</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">&#39;,&#39;</span><span class="o">)</span> <span class="o">+</span> <span class="n">1</span><span class="o">);</span>
+
+                <span class="n">String</span> <span class="n">suspectedCount</span> <span class="o">=</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">15</span><span class="o">,</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">&#39;,&#39;</span><span class="o">));</span><span class="c1">//疑似病例
+</span><span class="c1"></span>
+                <span class="n">CityCondition</span> <span class="o">=</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">CityCondition</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">&#39;,&#39;</span><span class="o">)</span> <span class="o">+</span> <span class="n">1</span><span class="o">);</span>
+
+                <span class="n">String</span> <span class="n">CuredCount</span> <span class="o">=</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">11</span><span class="o">,</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">&#39;,&#39;</span><span class="o">));</span><span class="c1">//治愈病例
+</span><span class="c1"></span>
+                <span class="n">CityCondition</span> <span class="o">=</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">CityCondition</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">&#39;,&#39;</span><span class="o">)</span> <span class="o">+</span> <span class="n">1</span><span class="o">);</span>
+
+                <span class="n">String</span> <span class="n">deadCount</span> <span class="o">=</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">10</span><span class="o">,</span> <span class="n">CityCondition</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">&#39;,&#39;</span><span class="o">));</span><span class="c1">//死亡病例
+</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">		<span class="c1">//这里就是找到五个最大值
+</span><span class="c1"></span>		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">1</span> <span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">jr</span><span class="o">.</span><span class="na">length</span> <span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">zg</span><span class="o">[</span><span class="n">k</span><span class="o">]&gt;</span><span class="n">zg</span><span class="o">[</span><span class="n">max1</span><span class="o">])</span>
+                <span class="n">max1</span> <span class="o">=</span> <span class="n">k</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">1</span> <span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">jr</span><span class="o">.</span><span class="na">length</span> <span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">zg</span><span class="o">[</span><span class="n">k</span><span class="o">]&gt;</span><span class="n">zg</span><span class="o">[</span><span class="n">max2</span><span class="o">]&amp;</span><span class="n">zg</span><span class="o">[</span><span class="n">k</span><span class="o">]&lt;</span><span class="n">zg</span><span class="o">[</span><span class="n">max1</span><span class="o">])</span>
+                <span class="n">max2</span> <span class="o">=</span> <span class="n">k</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">1</span> <span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">jr</span><span class="o">.</span><span class="na">length</span> <span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">zg</span><span class="o">[</span><span class="n">k</span><span class="o">]&gt;</span><span class="n">zg</span><span class="o">[</span><span class="n">max3</span><span class="o">]&amp;</span><span class="n">zg</span><span class="o">[</span><span class="n">k</span><span class="o">]&lt;</span><span class="n">zg</span><span class="o">[</span><span class="n">max2</span><span class="o">])</span>
+                <span class="n">max3</span> <span class="o">=</span> <span class="n">k</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">1</span> <span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">jr</span><span class="o">.</span><span class="na">length</span> <span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">zg</span><span class="o">[</span><span class="n">k</span><span class="o">]&gt;</span><span class="n">zg</span><span class="o">[</span><span class="n">max4</span><span class="o">]&amp;</span><span class="n">zg</span><span class="o">[</span><span class="n">k</span><span class="o">]&lt;</span><span class="n">zg</span><span class="o">[</span><span class="n">max3</span><span class="o">])</span>
+                <span class="n">max4</span> <span class="o">=</span> <span class="n">k</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">1</span> <span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">jr</span><span class="o">.</span><span class="na">length</span> <span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">zg</span><span class="o">[</span><span class="n">k</span><span class="o">]&gt;</span><span class="n">zg</span><span class="o">[</span><span class="n">max5</span><span class="o">]&amp;</span><span class="n">zg</span><span class="o">[</span><span class="n">k</span><span class="o">]&lt;</span><span class="n">zg</span><span class="o">[</span><span class="n">max4</span><span class="o">])</span>
+                <span class="n">max5</span> <span class="o">=</span> <span class="n">k</span><span class="o">;</span>
+        <span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>三个程序的源文件我都已经上传到我的<a href="https://github.com/MaoZhuoqi/Java_Experiment_1">GitHub仓库</a>了，对你有帮助的话就点个star吧!</p>
+
+        </div>
+        <div class ='post_extra mb-2'>
+          <div class = 'copy'></div>
+
+        </div>
+        <div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href = 'https://maozhuoqi.github.io' class = 'post_nav'><span class = 'post_next'>The Latest</span>T</a>
+
+    </main>
+    <footer class = 'footer wrap pale'>
+  <p>&copy;&nbsp;<span class = 'year'></span>&nbsp;MaoZhuoqi Blog</p>
+  <p>Designed by  <a href = 'https://github.com/MaoZhuoqi' target = '_blank' title = 'Linkedin Profile' rel = 'nonopener'>MaoZhuoqi</a></p>
+</footer>
+
+
+<script src = 'https://maozhuoqi.github.io/js/index.min.a7011895263f2c719263f1d87d98f126da2a46d6a8c12349d1f3bcbe06ba3c34627f518022a1b532987da7ee802bb6f027c1fb27934323ef4204e8e00aa802e7.js'></script>
+
+  </body>
+</html>

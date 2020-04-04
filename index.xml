@@ -12,6 +12,26 @@
     
     
     <item>
+      <title>一个JAVA实验课</title>
+      <link>https://maozhuoqi.github.io/post/blog2/</link>
+      <pubDate>Sat, 04 Apr 2020 22:27:36 +0800</pubDate>
+      
+      <guid>https://maozhuoqi.github.io/post/blog2/</guid>
+      <description>这是一次JAVA实验课的实验内容。
+实验内容如下
+   从键盘输入3个浮点数作为三角形三边的边长，试计算三角形的面积。
+  编程序，显示螺旋方阵
+​ 1 2 3 4
+​ 12 13 14 5
+​ 11 16 15 6
+​ 10 9 8 7
+  读取疫情数据，并输出确认人数最高的5个地区。
+   第一道题就不用说了，基础中的基础，分分钟搞定。后面两题难度依次增加。
+第二题刚拿到有点没搞清楚思路，交流了一下，得到一个比较好的算法，简单说就是先计算左上到右下对角线的值，再计算上面横向的值，接着计算右面竖向的值，然后是下面的值，最后是左边的值，这样就可以组合成数字螺旋了。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34  //算左上至右下的对角线的值  for (int i = 0; i &amp;lt; n / 2; i++) { A[i + 1][i + 1] = A[i][i] + 4 * (n - 2 * i - 1); } //计算每行上面横向的值  for (int i = 0; i &amp;lt; n; i++) { for (int j = i + 1; j &amp;lt; n - i; j++) { A[i][j] = A[i][j - 1] + 1; } } //计算每列右边竖向的值  for (int i = n - 1; i &amp;gt;= 0; i--) { for (int j = n - i - 1; j &amp;lt; i; j++) { A[j + 1][i] = A[j][i] + 1; } } //计算每行下面横向的值  for (int i = n - 1; i &amp;gt; n / 2; i--) { for (int j = i; j &amp;gt; n - i - 1; j--) { A[i][j - 1] = A[i][j] + 1; } } //计算每列左边竖向的值  for (int i = 0; i &amp;lt; n / 2; i++) { for (int j = n - 1 - i; j &amp;gt; i + 1; j--) { A[j - 1][i] = A[j][i] + 1; } }   当然如果n*n的矩阵的n是偶数，就需要特别处理一下：</description>
+    </item>
+    
+    <item>
       <title>熊孩子，程序员还治不了你了!!!</title>
       <link>https://maozhuoqi.github.io/post/blog1/</link>
       <pubDate>Sat, 04 Apr 2020 15:28:15 +0800</pubDate>
