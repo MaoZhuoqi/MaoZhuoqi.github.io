@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MaoZhuoqi Blog</title>
-    <link>https://maozhuoqi.github.io/</link>
+    <link>https://MaoZhuoqi.github.io/</link>
     <description>Recent content on MaoZhuoqi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 25 Aug 2019 00:52:59 +0300</lastBuildDate>
     
-	<atom:link href="https://maozhuoqi.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://MaoZhuoqi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>熊孩子，程序员还治不了你了!!!</title>
-      <link>https://maozhuoqi.github.io/post/blog1/</link>
+      <link>https://MaoZhuoqi.github.io/post/blog1/</link>
       <pubDate>Sat, 04 Apr 2020 15:28:15 +0800</pubDate>
       
-      <guid>https://maozhuoqi.github.io/post/blog1/</guid>
+      <guid>https://MaoZhuoqi.github.io/post/blog1/</guid>
       <description>事情是这样子的，MATLAB编程课上，老师看到了这么一篇文章《熊孩子，程序员还治不了你了!!!》，就让我们也写一个文中类是的工具，接下来就是一天的奋战。
 原文是这么说的：
  作为一个程序员，我就不信，我还治不了一个熊孩子！
@@ -33,10 +33,10 @@ Math页面下的Generate Test的回调函数 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
     
     <item>
       <title>About Me</title>
-      <link>https://maozhuoqi.github.io/about/</link>
+      <link>https://MaoZhuoqi.github.io/about/</link>
       <pubDate>Wed, 28 Oct 1998 00:00:00 +0000</pubDate>
       
-      <guid>https://maozhuoqi.github.io/about/</guid>
+      <guid>https://MaoZhuoqi.github.io/about/</guid>
       <description>你好呀！
 我叫MaoZhuoqi，这是我的个人博客。
 如果有兴趣和我交流，可以访问我的github仓库（https://github.com/MaoZhuoqi），点一个小star💓</description>
