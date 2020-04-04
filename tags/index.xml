@@ -2,20 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on MaoZhuoqi Blog</title>
-    <link>http://maozhuoqi.github.io/tags/</link>
+    <link>https://maozhuoqi.github.io/tags/</link>
     <description>Recent content in Tags on MaoZhuoqi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
     <lastBuildDate>Sat, 04 Apr 2020 15:28:15 +0800</lastBuildDate>
     
-	<atom:link href="http://maozhuoqi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://maozhuoqi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>MATLAB</title>
-      <link>http://maozhuoqi.github.io/tags/matlab/</link>
+      <link>https://maozhuoqi.github.io/tags/matlab/</link>
       <pubDate>Sat, 04 Apr 2020 15:28:15 +0800</pubDate>
       
-      <guid>http://maozhuoqi.github.io/tags/matlab/</guid>
+      <guid>https://maozhuoqi.github.io/tags/matlab/</guid>
       <description></description>
     </item>
     
