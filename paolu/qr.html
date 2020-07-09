@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+	<title>杭电助手 凭证</title>
+	<style type="text/css">
+	div{width:1150px;
+        height:50px;
+        left: 5px;
+        line-height: 50px;
+        border:0px solid red;
+        margin: 0 auto;
+        font-size: 50px;
+        color: black;
+        font-weight: 500;
+        text-align: center;
+       }
+       .info{
+        position: absolute;
+        z-index: 10;
+        width:400px;
+        height:150px;
+        left: 650px;
+        line-height: 150px;
+        border:0px solid red;
+        margin: 0 auto;
+        font-size: 55px;
+        color: rgb(2,2,2);
+        font-weight: 300;
+        text-align: right;
+       }
+	</style>
+</head>
+<body onload = "setinfo()">
+
+	<div style="width: 100%;height: 100px;position: absolute;top: 0;left: 15" id="ball">
+        <img style="z-index:1" src="pz.png" alt="picture" onclick="goURL()" />
+    </div>
+
+    
+    <div class="info" style="position:relative;top: 800px;left: 520px;" id="name"></div>
+
+    <div style="color: rgb(66, 66, 66);
+        font-family: 黑体;
+        font-weight: normal; 
+        font-size: 55px;
+        z-index: 5;
+        position: relative;
+        top: 3300px;
+        left: -375px"
+        id="dtime">
+    </div>
+
+    <div style="color: rgb(66, 66, 66);
+        font-family: 黑体;
+        font-weight: normal; 
+        font-size: 55px;
+        z-index: 5;
+        position: relative;
+        top: 3020px;
+        left: -375px"
+        id="dtime2">
+    </div>
+
+    <div style="color: rgb(66, 66, 66);
+        font-family: 黑体;
+        font-weight: normal; 
+        font-size: 55px;
+        z-index: 5;
+        position: relative;
+        top: 2305px;
+        left: 80px"
+        id="dtime3">
+    </div>
+    <div style="color: rgb(66, 66, 66);
+        font-family: 黑体;
+        font-weight: normal; 
+        font-size: 55px;
+        z-index: 5;
+        position: relative;
+        top: 2170px;
+        left: -20px"
+        id="dtime4">
+    </div>
+    <div style="text-align: left;
+        line-height:80px;
+        color: rgb(66, 66, 66);
+        font-family: 黑体;
+        font-weight: normal; 
+        font-size: 55px;
+        z-index: 5;
+        position: relative;
+        top: 1050px;
+        left: 150px"
+        id="dtime5">
+    </div>
+
+
+    <script type="text/javascript">
+        var ball=document.getElementById('ball');
+        var h=window.innerHeight/2;
+        ball.style.height=h+'px';
+    </script>
+
+    <script type="text/javascript">
+        //色tInterval("setinfo()",5000)
+        function setinfo(){
+            url= document.location.href.split("?");
+            temp =url[1].split("&");
+            var val = Array()
+            for ( var i=0;i<temp.length;i++)
+            {
+                var pair=temp[i].split("=");
+                val[i]=pair[1];
+            }
+
+            name = decodeURI(val[0]);
+            number = val[1];
+            xueyuan = decodeURI(val[2]);
+            banji = val[3];
+            teacher = decodeURI(val[4]);
+            reason = decodeURI(val[5]);
+
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("number").innerHTML = number;
+            document.getElementById("xueyuan").innerHTML = xueyuan;
+            document.getElementById("banji").innerHTML = banji;
+            document.getElementById("teacher").innerHTML = teacher;
+            document.getElementById("reason").innerHTML = reason;
+        }
+    </script>
+
+    <script type="text/javascript">
+        var divobj=document.getElementById('dtime');
+        var divobj2=document.getElementById('dtime2');
+        var divobj3=document.getElementById('dtime3');
+        var divobj4=document.getElementById('dtime4');
+        var divobj5=document.getElementById('dtime5');
+        //定时器的用法
+        setInterval("settime()",1000);   //每秒
+        function settime(){
+        var node = new Date();
+        var y=node.getFullYear();
+        var m=(node.getMonth()+1);
+        var d=node.getDate();
+        var h=node.getHours();
+        var i=node.getMinutes();
+        var s=node.getSeconds();
+        var date="2020-" + m + "-" + d;
+        var date2="2020/" + m + "/" + d + " " + "上午8:43:27";
+        if (d <= 2)
+        {
+            var date3="该学生14日内请假2次,未出门0次,未归"+"<br>"+
+            "(含在外住宿)0次,在外时间超时0次 2020"+"<br>"+
+            "年"+(m-1)+"月"+"29"+"日 : 已返回，出门: 16:13；返"+"<br>"+
+            "回：17:19 ; 2020年"+(m-1)+"月"+"30"+"日 : 已返回，出"+"<br>"+
+            "门: 12:13；返回：13:31 ;"
+        }
+        else
+        {
+            var date3="该学生14日内请假2次,未出门0次,未归"+"<br>"+
+            "(含在外住宿)0次,在外时间超时0次 2020"+"<br>"+
+            "年"+m+"月"+(d-2)+"日 : 已返回，出门: 16:13；返"+"<br>"+
+            "回：17:19 ; 2020年"+m+"月"+(d-1)+"日 : 已返回，出"+"<br>"+
+            "门: 12:13；返回：13:31 ;"
+        }
+
+        //var time="当前时间:" + (m+"月"+d+"日"+h+":"+i+":"+s);
+        var divVal=divobj.innerHTML=date;
+        var divVal2=divobj2.innerHTML=date;
+        var divVal3=divobj3.innerHTML=date2;
+        var divVal4=divobj4.innerHTML=date2;
+        var divVal4=divobj5.innerHTML=date3;
+        document.getElementById("date1").innerHTML = date;
+        document.getElementById("date2").innerHTML = date;
+        }
+    </script>
+</body>
+</html>
